@@ -9,6 +9,7 @@ import org.hibernate.criterion.Restrictions;
 
 import com.org.GeopoliticaRD.interfaces.data.acces.DataOperation;
 import com.org.GeopoliticaRD.models.Municipio;
+import com.org.GeopoliticaRD.models.Provincia;
 import com.org.GeopoliticaRD.utility.Utility;
 
 public class ManagerMunicipio implements DataOperation<Municipio> {
@@ -33,15 +34,15 @@ public class ManagerMunicipio implements DataOperation<Municipio> {
 	}
 
 	public void delete(Municipio municipio) {
-		Query query = this.hibernteSession.createQuery("Delete from Municipo where id=:id");
+		Query query = this.hibernteSession.createQuery("Delete from Municipio where id=:id");
 		query.setLong("id", municipio.getId());
 
 	}
 
 	@Override
-	public List<Municipio> find() {
+	public Municipio [] find() {
 
-		return this.hibernteSession.createCriteria(Municipio.class).list();
+		return (Municipio[]) this.hibernteSession.createCriteria(Municipio.class).list().toArray();
 	}
 
 	@Override
@@ -58,6 +59,13 @@ public class ManagerMunicipio implements DataOperation<Municipio> {
 		query.setLong("id", id);
 		query.executeUpdate();
 
+	}
+	
+	
+	public Municipio [] findMunicipios(Provincia provincia)
+	{
+		
+		return null;
 	}
 
 }

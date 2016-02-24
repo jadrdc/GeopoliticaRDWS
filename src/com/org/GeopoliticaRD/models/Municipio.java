@@ -1,7 +1,6 @@
 package com.org.GeopoliticaRD.models;
 
 import java.io.Serializable;
-import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -12,6 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OrderColumn;
 import javax.persistence.Table;
 
 @Entity
@@ -22,16 +22,16 @@ public class Municipio implements Serializable {
 	private long id;
 	private static final long serialVersionUID = 1L;
 	private Provincia provincia;
-    private Set<Distrito> distritos;
+    private Distrito [] distritos;
 	
 	
 	
-	
+    @OrderColumn
 	@OneToMany(fetch=FetchType.LAZY,mappedBy="distrito")
-	public Set<Distrito> getDistritos() {
+	public Distrito [] getDistritos() {
 		return distritos;
 	}
-	public void setDistritos(Set<Distrito> distritos) {
+	public void setDistritos(Distrito [] distritos) {
 		this.distritos = distritos;
 	}
 	

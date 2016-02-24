@@ -1,17 +1,12 @@
 package com.org.GeopoliticaRD.managers;
 
-import java.util.List;
-
+import org.hibernate.Query;
 import org.hibernate.Session;
-import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
-import org.hibernate.cfg.Configuration;
 import org.hibernate.criterion.Restrictions;
-import org.hibernate.service.ServiceRegistry;
 
 import com.org.GeopoliticaRD.interfaces.data.acces.DataOperation;
 import com.org.GeopoliticaRD.models.Distrito;
 import com.org.GeopoliticaRD.models.Municipio;
-import com.org.GeopoliticaRD.models.Provincia;
 import com.org.GeopoliticaRD.utility.Utility;
 
 public class ManagerDistrito implements DataOperation<Distrito> {
@@ -27,9 +22,9 @@ public class ManagerDistrito implements DataOperation<Distrito> {
 	}
 
 	@Override
-	public List<Distrito> find() {
+	public Distrito [] find() {
 
-		return this.hibernteSession.createCriteria(Distrito.class).list();
+		return (Distrito[]) this.hibernteSession.createCriteria(Distrito.class).list().toArray();
 	}
 
 	@Override
@@ -40,14 +35,21 @@ public class ManagerDistrito implements DataOperation<Distrito> {
 
 	@Override
 	public void delete(long id) {
-		// TODO Auto-generated method stub
+		Query query = this.hibernteSession.createQuery("delete from Distrito where municipio_id=:id");
+		query.setLong("id", id);
+		query.executeUpdate();
 
 	}
 
 	@Override
 	public void update(Distrito p) {
-		// TODO Auto-generated method stub
-
+		this.hibernteSession.update(p);
+	}
+	
+	
+	public Distrito [] findDistritos(Municipio municipio)
+	{
+		return null;
 	}
 
 }

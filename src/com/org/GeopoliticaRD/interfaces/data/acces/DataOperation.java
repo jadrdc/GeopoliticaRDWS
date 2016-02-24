@@ -3,7 +3,7 @@ package com.org.GeopoliticaRD.interfaces.data.acces;
 import java.util.List;
 
 public interface DataOperation<E> {
-	List<E> find();
+	E [] find();
 
 	E findOne(long id);
 

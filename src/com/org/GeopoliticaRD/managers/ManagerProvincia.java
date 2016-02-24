@@ -1,17 +1,11 @@
 package com.org.GeopoliticaRD.managers;
 
-import java.util.List;
-
 import org.hibernate.Criteria;
 import org.hibernate.Query;
 import org.hibernate.Session;
-import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
-import org.hibernate.cfg.Configuration;
 import org.hibernate.criterion.Restrictions;
-import org.hibernate.service.ServiceRegistry;
 
 import com.org.GeopoliticaRD.interfaces.data.acces.DataOperation;
-import com.org.GeopoliticaRD.models.Municipio;
 import com.org.GeopoliticaRD.models.Provincia;
 import com.org.GeopoliticaRD.utility.Utility;
 
@@ -31,10 +25,10 @@ public class ManagerProvincia implements DataOperation<Provincia> {
 	 * @see com.org.GeopoliticaRD.managers.DatabaseOperation#find()
 	 */
 	@Override
-	public List<Provincia> find() {
+	public Provincia [] find() {
 		Criteria provinciaList = this.hibernteSession.createCriteria(Provincia.class);
 
-		return (List<Provincia>) provinciaList.list();
+		return (Provincia[]) provinciaList.list().toArray();
 	}
 
 	/*

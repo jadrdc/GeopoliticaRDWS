@@ -9,9 +9,10 @@
   <property name="hibernate.connection.password"/>
   <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
   <property name="hibernate.connection.autocommit">true</property>
-  <mapping class="com.org.GeopoliticaRD.models.Provincia"/>
   <mapping class="com.org.GeopoliticaRD.models.Municipio"/>
-  <mapping class="com.org.GeopoliticaRD.models.Distrito"/>
+  <mapping class="com.org.GeopoliticaRD.models.Provincia"/>
+ 
+
  </session-factory>
 </hibernate-configuration>
 

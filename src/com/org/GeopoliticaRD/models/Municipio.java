@@ -1,42 +1,50 @@
 package com.org.GeopoliticaRD.models;
 
 import java.io.Serializable;
+import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "municipios")
 public class Municipio implements Serializable {
 
-	@Column(name = "nombre")
 	private String nombre;
-
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "municipio_id")
 	private long id;
-
 	private static final long serialVersionUID = 1L;
+	private Provincia provincia;
+    private Set<Distrito> distritos;
+	
+	
+	
+	
+	@OneToMany(fetch=FetchType.LAZY,mappedBy="distrito")
+	public Set<Distrito> getDistritos() {
+		return distritos;
+	}
+	public void setDistritos(Set<Distrito> distritos) {
+		this.distritos = distritos;
+	}
+	
+	@ManyToOne
+	@JoinColumn(name = "provincia_id")
+	public Provincia getProvincia() {
+		return provincia;
+	}
+	public void setProvincia(Provincia provincia) {
+		this.provincia = provincia;
+	}
 
-	/*
-	 * @ManyToOne
-	 * 
-	 * @JoinColumn(name="provincia_id") private Provincia provincia;
-	 * 
-	 * 
-	 * 
-	 * 
-	 * 
-	 * public Provincia getProvincia() { return provincia; } public void
-	 * setProvincia(Provincia provincia) { this.provincia = provincia; }
-	 */
+	@Column(name = "nombre")
 	public String getNombre() {
 		return nombre;
 	}
@@ -45,6 +53,9 @@ public class Municipio implements Serializable {
 		this.nombre = nombre;
 	}
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "municipio_id")
 	public long getId() {
 		return id;
 	}

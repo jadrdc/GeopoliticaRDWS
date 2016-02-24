@@ -9,7 +9,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
-import javax.persistence.OrderColumn;
 import javax.persistence.Table;
 
 @Entity
@@ -41,7 +40,6 @@ public class Provincia implements Serializable {
 		this.id = id;
 	}
 
-	@OrderColumn
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "provincia")
 	public Municipio[] getMunicipios() {
 		return municipios;

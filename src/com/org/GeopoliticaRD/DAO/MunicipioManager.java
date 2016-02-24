@@ -2,20 +2,19 @@ package com.org.GeopoliticaRD.DAO;
 
 import java.util.List;
 
-import com.org.GeopoliticaRD.managers.ManagerMunicipio;
+import com.org.GeopoliticaRD.managers.MunicipioDAO;
 import com.org.GeopoliticaRD.models.Municipio;
-import com.org.GeopoliticaRD.models.Provincia;
 
-public class MunicipioDAO {
+public class MunicipioManager {
 
-	private ManagerMunicipio managerMuni = new ManagerMunicipio();
+	private MunicipioDAO managerMuni = new MunicipioDAO();
 	private static final long serialVersionUID = 1L;
 
 	public Municipio findOne(long id) {
 		return this.managerMuni.findOne(id);
 	}
 
-	public Municipio [] findAll() {
+	public List<Municipio> findAll() {
 		return this.managerMuni.find();
 	}
 	

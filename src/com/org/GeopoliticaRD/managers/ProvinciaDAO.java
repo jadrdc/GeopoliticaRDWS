@@ -1,5 +1,7 @@
 package com.org.GeopoliticaRD.managers;
 
+import java.util.List;
+
 import org.hibernate.Criteria;
 import org.hibernate.Query;
 import org.hibernate.Session;
@@ -9,11 +11,11 @@ import com.org.GeopoliticaRD.interfaces.data.acces.DataOperation;
 import com.org.GeopoliticaRD.models.Provincia;
 import com.org.GeopoliticaRD.utility.Utility;
 
-public class ManagerProvincia implements DataOperation<Provincia> {
+public class ProvinciaDAO implements DataOperation<Provincia> {
 	private Session hibernteSession;
 	private Utility util;
 
-	public ManagerProvincia() {
+	public ProvinciaDAO() {
 		this.util = new Utility();
 		this.hibernteSession = util.getHibernteSession();
 
@@ -25,10 +27,10 @@ public class ManagerProvincia implements DataOperation<Provincia> {
 	 * @see com.org.GeopoliticaRD.managers.DatabaseOperation#find()
 	 */
 	@Override
-	public Provincia [] find() {
+	public List<Provincia> find() {
 		Criteria provinciaList = this.hibernteSession.createCriteria(Provincia.class);
 
-		return (Provincia[]) provinciaList.list().toArray();
+		return provinciaList.list();
 	}
 
 	/*

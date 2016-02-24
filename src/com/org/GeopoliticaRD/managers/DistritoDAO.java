@@ -1,5 +1,7 @@
 package com.org.GeopoliticaRD.managers;
 
+import java.util.List;
+
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
@@ -9,12 +11,12 @@ import com.org.GeopoliticaRD.models.Distrito;
 import com.org.GeopoliticaRD.models.Municipio;
 import com.org.GeopoliticaRD.utility.Utility;
 
-public class ManagerDistrito implements DataOperation<Distrito> {
+public class DistritoDAO implements DataOperation<Distrito> {
 
 	private Session hibernteSession;
 	private Utility util;
 
-	public ManagerDistrito() {
+	public DistritoDAO() {
 
 		this.util = new Utility();
 		this.hibernteSession = util.getHibernteSession();
@@ -22,9 +24,9 @@ public class ManagerDistrito implements DataOperation<Distrito> {
 	}
 
 	@Override
-	public Distrito [] find() {
+	public List<Distrito> find() {
 
-		return (Distrito[]) this.hibernteSession.createCriteria(Distrito.class).list().toArray();
+		return this.hibernteSession.createCriteria(Distrito.class).list();
 	}
 
 	@Override
@@ -47,7 +49,7 @@ public class ManagerDistrito implements DataOperation<Distrito> {
 	}
 	
 	
-	public Distrito [] findDistritos(Municipio municipio)
+	public   List<Distrito>  findDistritos(Municipio municipio)
 	{
 		return null;
 	}

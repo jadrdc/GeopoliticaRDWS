@@ -12,11 +12,11 @@ import com.org.GeopoliticaRD.models.Municipio;
 import com.org.GeopoliticaRD.models.Provincia;
 import com.org.GeopoliticaRD.utility.Utility;
 
-public class ManagerMunicipio implements DataOperation<Municipio> {
+public class MunicipioDAO implements DataOperation<Municipio> {
 	private Session hibernteSession;
 	private Utility util;
 
-	public ManagerMunicipio() {
+	public MunicipioDAO() {
 
 		this.util = new Utility();
 		this.hibernteSession = util.getHibernteSession();
@@ -40,9 +40,9 @@ public class ManagerMunicipio implements DataOperation<Municipio> {
 	}
 
 	@Override
-	public Municipio [] find() {
+	public List<Municipio> find() {
 
-		return (Municipio[]) this.hibernteSession.createCriteria(Municipio.class).list().toArray();
+		return   this.hibernteSession.createCriteria(Municipio.class).list();
 	}
 
 	@Override
@@ -62,7 +62,7 @@ public class ManagerMunicipio implements DataOperation<Municipio> {
 	}
 	
 	
-	public Municipio [] findMunicipios(Provincia provincia)
+	public List<Municipio> findMunicipios(Provincia provincia)
 	{
 		
 		return null;

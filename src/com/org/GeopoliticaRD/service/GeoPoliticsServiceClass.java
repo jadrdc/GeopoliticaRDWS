@@ -1,20 +1,21 @@
 package com.org.GeopoliticaRD.service;
 
 import java.io.Serializable;
+import java.util.List;
 
-import com.org.GeopoliticaRD.DAO.DistritoDAO;
-import com.org.GeopoliticaRD.DAO.MunicipioDAO;
-import com.org.GeopoliticaRD.DAO.ProvinciaDAO;
+import com.org.GeopoliticaRD.DAO.DistritoManager;
+import com.org.GeopoliticaRD.DAO.MunicipioManager;
+import com.org.GeopoliticaRD.DAO.ProvinciaManager;
 import com.org.GeopoliticaRD.models.Distrito;
 import com.org.GeopoliticaRD.models.Municipio;
 import com.org.GeopoliticaRD.models.Provincia;
 
 public class GeoPoliticsServiceClass implements Serializable {
-	ProvinciaDAO provinciaDao = new ProvinciaDAO();
-	MunicipioDAO municipioDao = new MunicipioDAO();
-	DistritoDAO distritoDao = new DistritoDAO();
+	ProvinciaManager provinciaDao = new ProvinciaManager();
+	MunicipioManager municipioDao = new MunicipioManager();
+	DistritoManager distritoDao = new DistritoManager();
 
-	public Provincia [] findAllProvincias() {
+	public List<Provincia> findAllProvincias() {
 		return  this.provinciaDao.findAll();
 
 	}

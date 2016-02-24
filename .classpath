@@ -68,5 +68,12 @@
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/workspace/GeoPolitica RD WS/libs/javax.ws.rs-api-2.0.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/workspace/GeoPolitica RD WS/libs/jersey-client.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/workspace/GeoPolitica RD WS/libs/jersey-common.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/workspace/GeoPolitica RD WS/libs/jersey-container-servlet.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/workspace/GeoPolitica RD WS/libs/jersey-container-servlet-core.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/workspace/GeoPolitica RD WS/libs/jersey-media-jaxb.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/workspace/GeoPolitica RD WS/libs/jersey-server.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

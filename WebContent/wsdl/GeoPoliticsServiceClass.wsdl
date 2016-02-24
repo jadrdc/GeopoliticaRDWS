@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://service.GeopoliticaRD.org.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://service.GeopoliticaRD.org.com" xmlns:intf="http://service.GeopoliticaRD.org.com" xmlns:tns1="http://models.GeopoliticaRD.org.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://service.GeopoliticaRD.org.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://models.GeopoliticaRD.org.com"/>
+   <element name="findOne">
+    <complexType>
+     <sequence>
+      <element name="id" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="findOneResponse">
+    <complexType>
+     <sequence>
+      <element name="findOneReturn" type="tns1:Provincia"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="ArrayOf_tns1_Distrito">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="item" type="tns1:Distrito"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOf_tns1_Municipio">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="item" type="tns1:Municipio"/>
+    </sequence>
+   </complexType>
+   <element name="findMunicipios">
+    <complexType>
+     <sequence>
+      <element name="provincia" type="tns1:Provincia"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="findMunicipiosResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="findMunicipiosReturn" type="tns1:Municipio"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="findDistritos">
+    <complexType>
+     <sequence>
+      <element name="municipio" type="tns1:Municipio"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="findDistritosResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="findDistritosReturn" type="tns1:Distrito"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="findDistrito">
+    <complexType>
+     <sequence>
+      <element name="id" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="findDistritoResponse">
+    <complexType>
+     <sequence>
+      <element name="findDistritoReturn" type="tns1:Distrito"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="findMunicipio">
+    <complexType>
+     <sequence>
+      <element name="id" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="findMunicipioResponse">
+    <complexType>
+     <sequence>
+      <element name="findMunicipioReturn" type="tns1:Municipio"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="findAllProvincias">
+    <complexType/>
+   </element>
+   <element name="findAllProvinciasResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="findAllProvinciasReturn" type="tns1:Provincia"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+  <schema elementFormDefault="qualified" targetNamespace="http://models.GeopoliticaRD.org.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://service.GeopoliticaRD.org.com"/>
+   <complexType name="Distrito">
+    <sequence>
+     <element name="distrito" nillable="true" type="tns1:Distrito"/>
+     <element name="id" type="xsd:long"/>
+     <element name="nombre" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="Municipio">
+    <sequence>
+     <element name="distritos" nillable="true" type="impl:ArrayOf_tns1_Distrito"/>
+     <element name="id" type="xsd:long"/>
+     <element name="nombre" nillable="true" type="xsd:string"/>
+     <element name="provincia" nillable="true" type="tns1:Provincia"/>
+    </sequence>
+   </complexType>
+   <complexType name="Provincia">
+    <sequence>
+     <element name="id" type="xsd:long"/>
+     <element name="municipios" nillable="true" type="impl:ArrayOf_tns1_Municipio"/>
+     <element name="nombre" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="findMunicipiosRequest">
+
+      <wsdl:part element="impl:findMunicipios" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="findOneResponse">
+
+      <wsdl:part element="impl:findOneResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="findDistritosResponse">
+
+      <wsdl:part element="impl:findDistritosResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="findOneRequest">
+
+      <wsdl:part element="impl:findOne" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="findDistritoResponse">
+
+      <wsdl:part element="impl:findDistritoResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="findDistritoRequest">
+
+      <wsdl:part element="impl:findDistrito" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="findMunicipioResponse">
+
+      <wsdl:part element="impl:findMunicipioResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="findDistritosRequest">
+
+      <wsdl:part element="impl:findDistritos" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="findMunicipioRequest">
+
+      <wsdl:part element="impl:findMunicipio" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="findAllProvinciasResponse">
+
+      <wsdl:part element="impl:findAllProvinciasResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="findMunicipiosResponse">
+
+      <wsdl:part element="impl:findMunicipiosResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="findAllProvinciasRequest">
+
+      <wsdl:part element="impl:findAllProvincias" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="GeoPoliticsServiceClass">
+
+      <wsdl:operation name="findOne">
+
+         <wsdl:input message="impl:findOneRequest" name="findOneRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:findOneResponse" name="findOneResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="findMunicipios">
+
+         <wsdl:input message="impl:findMunicipiosRequest" name="findMunicipiosRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:findMunicipiosResponse" name="findMunicipiosResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="findDistritos">
+
+         <wsdl:input message="impl:findDistritosRequest" name="findDistritosRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:findDistritosResponse" name="findDistritosResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="findDistrito">
+
+         <wsdl:input message="impl:findDistritoRequest" name="findDistritoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:findDistritoResponse" name="findDistritoResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="findMunicipio">
+
+         <wsdl:input message="impl:findMunicipioRequest" name="findMunicipioRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:findMunicipioResponse" name="findMunicipioResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="findAllProvincias">
+
+         <wsdl:input message="impl:findAllProvinciasRequest" name="findAllProvinciasRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:findAllProvinciasResponse" name="findAllProvinciasResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="GeoPoliticsServiceClassSoapBinding" type="impl:GeoPoliticsServiceClass">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="findOne">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="findOneRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="findOneResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="findMunicipios">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="findMunicipiosRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="findMunicipiosResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="findDistritos">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="findDistritosRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="findDistritosResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="findDistrito">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="findDistritoRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="findDistritoResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="findMunicipio">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="findMunicipioRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="findMunicipioResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="findAllProvincias">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="findAllProvinciasRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="findAllProvinciasResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="GeoPoliticsServiceClassService">
+
+      <wsdl:port binding="impl:GeoPoliticsServiceClassSoapBinding" name="GeoPoliticsServiceClass">
+
+         <wsdlsoap:address location="http://localhost:8080/GeoPolitica_RD_WS/services/GeoPoliticsServiceClass"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

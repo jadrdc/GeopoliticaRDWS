@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Use this file to deploy some handlers/chains and services      --><!-- Two ways to do this:                                           --><!--   java org.apache.axis.client.AdminClient deploy.wsdd          --><!--      after the axis server is running                          --><!-- or                                                             --><!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   --><!--      from the same directory that the Axis engine runs         --><deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from GeoPoliticsServiceClassService WSDL service -->
+
+  <service name="GeoPoliticsServiceClass" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://service.GeopoliticaRD.org.com"/>
+      <parameter name="wsdlServiceElement" value="GeoPoliticsServiceClassService"/>
+      <parameter name="schemaQualified" value="http://service.GeopoliticaRD.org.com,http://models.GeopoliticaRD.org.com"/>
+      <parameter name="wsdlServicePort" value="GeoPoliticsServiceClass"/>
+      <parameter name="className" value="com.org.GeopoliticaRD.service.GeoPoliticsServiceClass"/>
+      <parameter name="wsdlPortType" value="GeoPoliticsServiceClass"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation xmlns:operNS="http://service.GeopoliticaRD.org.com" xmlns:retNS="http://service.GeopoliticaRD.org.com" xmlns:rtns="http://models.GeopoliticaRD.org.com" name="findOne" qname="operNS:findOne" returnQName="retNS:findOneReturn" returnType="rtns:Provincia" soapAction="">
+        <parameter xmlns:pns="http://service.GeopoliticaRD.org.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:id" type="tns:int"/>
+      </operation>
+      <operation xmlns:operNS="http://service.GeopoliticaRD.org.com" xmlns:retNS="http://service.GeopoliticaRD.org.com" xmlns:rtns="http://models.GeopoliticaRD.org.com" name="findMunicipios" qname="operNS:findMunicipios" returnQName="retNS:findMunicipiosReturn" returnType="rtns:Municipio" soapAction="">
+        <parameter xmlns:pns="http://service.GeopoliticaRD.org.com" xmlns:tns="http://models.GeopoliticaRD.org.com" qname="pns:provincia" type="tns:Provincia"/>
+      </operation>
+      <operation xmlns:operNS="http://service.GeopoliticaRD.org.com" xmlns:retNS="http://service.GeopoliticaRD.org.com" xmlns:rtns="http://models.GeopoliticaRD.org.com" name="findDistritos" qname="operNS:findDistritos" returnQName="retNS:findDistritosReturn" returnType="rtns:Distrito" soapAction="">
+        <parameter xmlns:pns="http://service.GeopoliticaRD.org.com" xmlns:tns="http://models.GeopoliticaRD.org.com" qname="pns:municipio" type="tns:Municipio"/>
+      </operation>
+      <operation xmlns:operNS="http://service.GeopoliticaRD.org.com" xmlns:retNS="http://service.GeopoliticaRD.org.com" xmlns:rtns="http://models.GeopoliticaRD.org.com" name="findDistrito" qname="operNS:findDistrito" returnQName="retNS:findDistritoReturn" returnType="rtns:Distrito" soapAction="">
+        <parameter xmlns:pns="http://service.GeopoliticaRD.org.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:id" type="tns:int"/>
+      </operation>
+      <operation xmlns:operNS="http://service.GeopoliticaRD.org.com" xmlns:retNS="http://service.GeopoliticaRD.org.com" xmlns:rtns="http://models.GeopoliticaRD.org.com" name="findMunicipio" qname="operNS:findMunicipio" returnQName="retNS:findMunicipioReturn" returnType="rtns:Municipio" soapAction="">
+        <parameter xmlns:pns="http://service.GeopoliticaRD.org.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:id" type="tns:int"/>
+      </operation>
+      <operation xmlns:operNS="http://service.GeopoliticaRD.org.com" xmlns:retNS="http://service.GeopoliticaRD.org.com" xmlns:rtns="http://models.GeopoliticaRD.org.com" name="findAllProvincias" qname="operNS:findAllProvincias" returnQName="retNS:findAllProvinciasReturn" returnType="rtns:Provincia" soapAction="">
+      </operation>
+      <parameter name="allowedMethods" value="findMunicipio findDistrito findDistritos findOne findAllProvincias findMunicipios"/>
+
+      <typeMapping xmlns:ns="http://models.GeopoliticaRD.org.com" qname="ns:Provincia" type="java:com.org.GeopoliticaRD.models.Provincia" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
+      <typeMapping xmlns:ns="http://models.GeopoliticaRD.org.com" qname="ns:Distrito" type="java:com.org.GeopoliticaRD.models.Distrito" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
+      <arrayMapping xmlns:ns="http://service.GeopoliticaRD.org.com" xmlns:cmp-ns="http://models.GeopoliticaRD.org.com" qname="ns:ArrayOf_tns1_Municipio" type="java:com.org.GeopoliticaRD.models.Municipio[]" innerType="cmp-ns:Municipio" encodingStyle=""/>
+      <arrayMapping xmlns:ns="http://service.GeopoliticaRD.org.com" xmlns:cmp-ns="http://models.GeopoliticaRD.org.com" qname="ns:ArrayOf_tns1_Distrito" type="java:com.org.GeopoliticaRD.models.Distrito[]" innerType="cmp-ns:Distrito" encodingStyle=""/>
+      <typeMapping xmlns:ns="http://models.GeopoliticaRD.org.com" qname="ns:Municipio" type="java:com.org.GeopoliticaRD.models.Municipio" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
+  </service>
+</deployment>

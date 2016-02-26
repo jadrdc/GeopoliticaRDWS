@@ -1,6 +1,7 @@
 package com.org.GeopoliticaRD.models;
 
 import java.io.Serializable;
+import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -18,7 +19,7 @@ public class Provincia implements Serializable {
 	private String nombre;
 	private static final long serialVersionUID = 1L;
 	private long id;
-	private Municipio[] municipios;
+	private  Set<Municipio> municipios;
 
 	@Column(name = "nombre")
 	public String getNombre() {
@@ -41,11 +42,11 @@ public class Provincia implements Serializable {
 	}
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "provincia")
-	public Municipio[] getMunicipios() {
+	public Set<Municipio> getMunicipios() {
 		return municipios;
 	}
 
-	public void setMunicipios(Municipio [] municipios) {
+	public void setMunicipios( Set<Municipio> municipios) {
 		this.municipios = municipios;
 	}
 

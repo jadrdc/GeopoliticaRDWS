@@ -2,28 +2,99 @@
     <wb-module deploy-name="GeoPolitica RD WS">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <dependent-module archiveName="jersey-media-jaxb.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/GeoPolitica RD WS/libs/jersey-media-jaxb.jar">
+        <wb-resource deploy-path="/" source-path="/WebContent/WEB-INF/lib"/>
+        <wb-resource deploy-path="/" source-path="/WebContent/WEB-INF/lib/required"/>
+        <dependent-module archiveName="google-guava.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/GeoPolitica RD WS/WebContent/WEB-INF/lib/google-guava.jar">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="jersey-client.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/GeoPolitica RD WS/libs/jersey-client.jar">
+        <dependent-module archiveName="jersey-media-jaxb.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/GeoPolitica RD WS/WebContent/WEB-INF/lib/jersey-media-jaxb.jar">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="jersey-container-servlet.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/GeoPolitica RD WS/libs/jersey-container-servlet.jar">
+        <dependent-module archiveName="google-guava.jar.zip" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/GeoPolitica RD WS/WebContent/WEB-INF/lib/google-guava.jar.zip">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="jersey-server.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/GeoPolitica RD WS/libs/jersey-server.jar">
+        <dependent-module archiveName="jersey-guava-2.7.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/GeoPolitica RD WS/WebContent/WEB-INF/lib/jersey-guava-2.7.jar">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="javax.ws.rs-api-2.0.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/GeoPolitica RD WS/libs/javax.ws.rs-api-2.0.1.jar">
+        <dependent-module archiveName="hk2-api-2.1.89.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/GeoPolitica RD WS/WebContent/WEB-INF/lib/hk2-api-2.1.89.jar">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="jersey-container-servlet-core.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/GeoPolitica RD WS/libs/jersey-container-servlet-core.jar">
+        <dependent-module archiveName="javax-inject-1.0-201002241208.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/GeoPolitica RD WS/WebContent/WEB-INF/lib/javax-inject-1.0-201002241208.jar">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="jersey-common.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/GeoPolitica RD WS/libs/jersey-common.jar">
+        <dependent-module archiveName="hk2-api-2.4.0-b02.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/GeoPolitica RD WS/WebContent/WEB-INF/lib/hk2-api-2.4.0-b02.jar">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="com.mysql.jdbc_5.1.5.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/GeoPolitica RD WS/libs/com.mysql.jdbc_5.1.5.jar">
+        <dependent-module archiveName="javax.servlet-api-3.1.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/GeoPolitica RD WS/WebContent/WEB-INF/lib/javax.servlet-api-3.1.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="javax.inject-2.1.88.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/GeoPolitica RD WS/WebContent/WEB-INF/lib/javax.inject-2.1.88.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="validation-api-1.1.0.Final.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/GeoPolitica RD WS/WebContent/WEB-INF/lib/validation-api-1.1.0.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="org.osgi.core-4.2.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/GeoPolitica RD WS/WebContent/WEB-INF/lib/org.osgi.core-4.2.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="javax.ws.rs-api-2.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/GeoPolitica RD WS/WebContent/WEB-INF/lib/javax.ws.rs-api-2.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hk2-utils-2.1.88.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/GeoPolitica RD WS/WebContent/WEB-INF/lib/hk2-utils-2.1.88.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="osgi-resource-locator-1.0.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/GeoPolitica RD WS/WebContent/WEB-INF/lib/osgi-resource-locator-1.0.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="javax.annotation-api-1.2.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/GeoPolitica RD WS/WebContent/WEB-INF/lib/javax.annotation-api-1.2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="guava-14.0.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/GeoPolitica RD WS/WebContent/WEB-INF/lib/guava-14.0.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hk2-api-2.1.88.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/GeoPolitica RD WS/WebContent/WEB-INF/lib/hk2-api-2.1.88.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="asm-all-repackaged-2.1.88.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/GeoPolitica RD WS/WebContent/WEB-INF/lib/asm-all-repackaged-2.1.88.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jaxb-api-2.2.7.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/GeoPolitica RD WS/WebContent/WEB-INF/lib/jaxb-api-2.2.7.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="cglib-2.1.88.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/GeoPolitica RD WS/WebContent/WEB-INF/lib/cglib-2.1.88.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hk2-locator-2.1.88.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/GeoPolitica RD WS/WebContent/WEB-INF/lib/hk2-locator-2.1.88.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jboss-logging-3.3.0.Final.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/GeoPolitica RD WS/WebContent/WEB-INF/lib/required/jboss-logging-3.3.0.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hibernate-commons-annotations-5.0.1.Final.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/GeoPolitica RD WS/WebContent/WEB-INF/lib/required/hibernate-commons-annotations-5.0.1.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hibernate-jpa-2.1-api-1.0.0.Final.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/GeoPolitica RD WS/WebContent/WEB-INF/lib/required/hibernate-jpa-2.1-api-1.0.0.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="javassist-3.20.0-GA.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/GeoPolitica RD WS/WebContent/WEB-INF/lib/required/javassist-3.20.0-GA.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jandex-2.0.0.Final.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/GeoPolitica RD WS/WebContent/WEB-INF/lib/required/jandex-2.0.0.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="antlr-2.7.7.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/GeoPolitica RD WS/WebContent/WEB-INF/lib/required/antlr-2.7.7.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="dom4j-1.6.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/GeoPolitica RD WS/WebContent/WEB-INF/lib/required/dom4j-1.6.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hibernate-core-5.1.0.Final.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/GeoPolitica RD WS/WebContent/WEB-INF/lib/required/hibernate-core-5.1.0.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="classmate-1.3.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/GeoPolitica RD WS/WebContent/WEB-INF/lib/required/classmate-1.3.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="geronimo-jta_1.1_spec-1.1.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/GeoPolitica RD WS/WebContent/WEB-INF/lib/required/geronimo-jta_1.1_spec-1.1.1.jar">
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <property name="context-root" value="GeoPolitica_RD_WS"/>

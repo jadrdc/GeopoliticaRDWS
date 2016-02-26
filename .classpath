@@ -13,67 +13,35 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="lib" path="C:/Users/Lenovo/workspace/GeoPolitica RD WS/libs/required/antlr-2.7.7.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Lenovo/workspace/GeoPolitica RD WS/libs/required/classmate-1.3.0.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Lenovo/workspace/GeoPolitica RD WS/libs/required/dom4j-1.6.1.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Lenovo/workspace/GeoPolitica RD WS/libs/required/geronimo-jta_1.1_spec-1.1.1.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Lenovo/workspace/GeoPolitica RD WS/libs/required/hibernate-commons-annotations-5.0.1.Final.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Lenovo/workspace/GeoPolitica RD WS/libs/required/hibernate-core-5.1.0.Final.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Lenovo/workspace/GeoPolitica RD WS/libs/required/hibernate-jpa-2.1-api-1.0.0.Final.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Lenovo/workspace/GeoPolitica RD WS/libs/required/jandex-2.0.0.Final.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Lenovo/workspace/GeoPolitica RD WS/libs/required/javassist-3.20.0-GA.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Lenovo/workspace/GeoPolitica RD WS/libs/required/jboss-logging-3.3.0.Final.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Lenovo/workspace/GeoPolitica RD WS/libs/com.mysql.jdbc_5.1.5.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Lenovo/workspace/GeoPolitica RD WS/libs/javax.ws.rs-api-2.0.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Lenovo/workspace/GeoPolitica RD WS/libs/jersey-client.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Lenovo/workspace/GeoPolitica RD WS/libs/jersey-common.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Lenovo/workspace/GeoPolitica RD WS/libs/jersey-container-servlet.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Lenovo/workspace/GeoPolitica RD WS/libs/jersey-container-servlet-core.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Lenovo/workspace/GeoPolitica RD WS/libs/jersey-media-jaxb.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Lenovo/workspace/GeoPolitica RD WS/libs/jersey-server.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/workspace/GeoPolitica RD WS/WebContent/WEB-INF/lib/com.mysql.jdbc_5.1.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/workspace/GeoPolitica RD WS/WebContent/WEB-INF/lib/required/antlr-2.7.7.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/workspace/GeoPolitica RD WS/WebContent/WEB-INF/lib/required/classmate-1.3.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/workspace/GeoPolitica RD WS/WebContent/WEB-INF/lib/required/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/workspace/GeoPolitica RD WS/WebContent/WEB-INF/lib/required/geronimo-jta_1.1_spec-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/workspace/GeoPolitica RD WS/WebContent/WEB-INF/lib/required/hibernate-commons-annotations-5.0.1.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/workspace/GeoPolitica RD WS/WebContent/WEB-INF/lib/required/hibernate-core-5.1.0.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/workspace/GeoPolitica RD WS/WebContent/WEB-INF/lib/required/hibernate-jpa-2.1-api-1.0.0.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/workspace/GeoPolitica RD WS/WebContent/WEB-INF/lib/required/jandex-2.0.0.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/workspace/GeoPolitica RD WS/WebContent/WEB-INF/lib/required/javassist-3.20.0-GA.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/workspace/GeoPolitica RD WS/WebContent/WEB-INF/lib/required/jboss-logging-3.3.0.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/workspace/GeoPolitica RD WS/WebContent/WEB-INF/lib/asm-all-repackaged-2.1.88.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/workspace/GeoPolitica RD WS/WebContent/WEB-INF/lib/cglib-2.1.88.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/workspace/GeoPolitica RD WS/WebContent/WEB-INF/lib/guava-14.0.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/workspace/GeoPolitica RD WS/WebContent/WEB-INF/lib/hk2-api-2.1.88.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/workspace/GeoPolitica RD WS/WebContent/WEB-INF/lib/hk2-locator-2.1.88.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/workspace/GeoPolitica RD WS/WebContent/WEB-INF/lib/hk2-utils-2.1.88.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/workspace/GeoPolitica RD WS/WebContent/WEB-INF/lib/javax.annotation-api-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/workspace/GeoPolitica RD WS/WebContent/WEB-INF/lib/javax.inject-2.1.88.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/workspace/GeoPolitica RD WS/WebContent/WEB-INF/lib/javax.servlet-api-3.1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/workspace/GeoPolitica RD WS/WebContent/WEB-INF/lib/javax.ws.rs-api-2.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/workspace/GeoPolitica RD WS/WebContent/WEB-INF/lib/jaxb-api-2.2.7.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/workspace/GeoPolitica RD WS/WebContent/WEB-INF/lib/jersey-client.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/workspace/GeoPolitica RD WS/WebContent/WEB-INF/lib/jersey-common.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/workspace/GeoPolitica RD WS/WebContent/WEB-INF/lib/jersey-container-servlet.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/workspace/GeoPolitica RD WS/WebContent/WEB-INF/lib/jersey-container-servlet-core.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/workspace/GeoPolitica RD WS/WebContent/WEB-INF/lib/jersey-server.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/workspace/GeoPolitica RD WS/WebContent/WEB-INF/lib/org.osgi.core-4.2.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/workspace/GeoPolitica RD WS/WebContent/WEB-INF/lib/osgi-resource-locator-1.0.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/workspace/GeoPolitica RD WS/WebContent/WEB-INF/lib/validation-api-1.1.0.Final.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
